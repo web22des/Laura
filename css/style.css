@@ -1113,11 +1113,34 @@ body._touch .menu__list > li._active .menu__arrow {
 .h2 {
   font-family: "Marcellus";
   text-transform: uppercase;
-  font-size: 25px;
   color: #C49A6C;
   margin-bottom: 30px;
   line-height: 150%;
   text-align: center;
+}
+
+@supports (font-size: clamp( 1.5625rem , 1.4488636364rem  +  0.5681818182vw , 1.875rem )) {
+  .h2 {
+    font-size: clamp( 1.5625rem , 1.4488636364rem  +  0.5681818182vw , 1.875rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.5625rem , 1.4488636364rem  +  0.5681818182vw , 1.875rem )) {
+  .h2 {
+    font-size: calc(1.5625rem + 0.3125 * (100vw - 20rem) / 55);
+  }
+}
+
+.btn {
+  min-width: 250px;
+}
+
+.btn-2 span {
+  border-radius: 10px;
+}
+
+.btn-2::before {
+  border-radius: 10px;
 }
 
 .btn-holder.button-white .btn-2 span {
@@ -1130,7 +1153,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .button-white .btn {
-  background-color: #2A2D2C;
+  border-radius: 10px;
 }
 
 body {
@@ -1477,14 +1500,14 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
+  gap: 25px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .servies__card {
-  width: 32%;
+  width: 31%;
   position: relative;
   border-radius: 20px;
   overflow: hidden;
@@ -1619,7 +1642,7 @@ body {
 
 @media (max-width: 75em) {
   .servies__card {
-    width: 48%;
+    width: 47%;
   }
 }
 
