@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230331051305">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- https://youtu.be/zs1r8yafTE8 -->
+		<!-- Адаптивное меню бургер с выпадающим подменю, а так же при помощи JS выбирает режим отбражения PC или Mobile -->
+		<!-- Так же навигация "Раздел-1" "Раздел-2" "Раздел-3" - это навигация по странице с плавным скроллом -->
+		<!-- Посмотреть пример на codePen https://codepen.io/web22des/pen/ZEMJNrB -->
+		<!-- Не работает с основными функциями шаблона ( функция flsFunctions.addTouchClass(); - должна быть выключена) -->
+		<!-- Также в основную страницу (home.html) в блоки, на которые привязана навигация нужно указать классы, закоментированный пример HTML-разметки внизу -->
+		<!-- Подключить стили -->
+		<!-- файл _header-burger.htm подключить в HTML файл home.html  @include('html/my-html/_header-burger.htm',{})  -->
+		<!-- файл header-burger.scss раскоментировать в файле общих стилей common.scss -->
+		<!-- файл header-burger.js раскоментировать в файле скриптов script.js -->
+
+		<header class="header">
+			<div class="header__container">
+				<a class="header__logo" href=""><picture><source srcset="img/logo/1-1.webp" type="image/webp"><img class="header__logo-img" src="img/logo/1-1.png" alt="Laura - салон красоты"></picture></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li><a href="#" class="menu__link">Услуги</a>
+								<span class="menu__arrow"></span>
+								<ul class="menu__sub-list">
+									<li><a href="#" class="menu__sub-link">Уход за лицом</a></li>
+									<li><a href="#" class="menu__sub-link">Уход за телом</a></li>
+									<li><a href="#" class="menu__sub-link">Массаж</a></li>
+									<li><a href="#" class="menu__sub-link">Уход за руками</a></li>
+									<li><a href="#" class="menu__sub-link">Уход за ногами</a></li>
+									<li><a href="#" class="menu__sub-link">Для него</a></li>
+									<li><a href="#" class="menu__sub-link">Эпиляция для нее</a></li>
+								</ul>
+							</li>
+							<li><a data-goto=".page__section--1" href="#" class="menu__link">О нас</a></li>
+							<li><a data-goto=".page__section--3" href="#" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<!-- =============== -->
+
+		<!-- <style>
+	.page__section {height: 50vh; margin-top: 80px;}
+	.page__section--1 {background-color: #794f45;}
+	.page__section--2 {background-color: #77608d;}
+	.page__section--3 {background-color: #7A956B;}
+	.page__title {font-size: 30px; text-align: center;}
+</style>
+
+<div class="page__container">
+	<section class="page__section page__section--1">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--2">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+	<section class="page__section page__section--3">
+			<h1 class="page__title">Далеко-далеко за словесными горами в стране.</h1>
+	</section>
+</div> -->
+		<main class="page">
+			<section class="top">
+				<div class="top__info">
+					<p class="top__subtitle">Добро пожаловать в салон красоты LAURA</p>
+					<h2 class="h1">Наши специалисты помогут вам найти гармонию с телом</h2>
+					<div class="btn-holder">
+						<button class="btn btn-2 hover-slide-up">
+							<span>Записаться онлайн</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="welcome">
+				<div class="welcome__container">
+					<div class="welcome__info">
+						<p class="welcome__subtitle">Добро пожаловать в салон красоты Laura</p>
+						<h2 class="h2">Очистите свой разум тело и дух с помощью процедур</h2>
+						<p class="welcome__text">Ваш преданный косметолог персонализирует вашу процедуру, чтобы вы погрузились в атмосферу релаксации.</p>
+						<div class="btn-holder button-white">
+							<button class="btn btn-2 hover-slide-up">
+								<span>Узнать больше</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="servies">
+				<div class="servies__container">
+					<div class="servies__top">
+						<h2 class="h2">Попробуйте обширное меню наших процедур и услуг</h2>
+						<div class="btn-holder">
+							<button class="btn btn-2 hover-slide-up">
+								<span>Записаться онлайн</span>
+							</button>
+						</div>
+					</div>
+					<div class="servies__body">
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Уход за лицом</h2>
+								<picture><source srcset="img/home/servies/1.webp" type="image/webp"><img src="img/home/servies/1.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Уход за телом</h2>
+								<picture><source srcset="img/home/servies/2.webp" type="image/webp"><img src="img/home/servies/2.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Массаж</h2>
+								<picture><source srcset="img/home/servies/3.webp" type="image/webp"><img src="img/home/servies/3.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Уход за руками</h2>
+								<picture><source srcset="img/home/servies/4.webp" type="image/webp"><img src="img/home/servies/4.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Уход за ногами</h2>
+								<picture><source srcset="img/home/servies/5.webp" type="image/webp"><img src="img/home/servies/5.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Для него</h2>
+								<picture><source srcset="img/home/servies/6.webp" type="image/webp"><img src="img/home/servies/6.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+						<div class="servies__card">
+							<a href="" class="servies__link">
+								<h2 class="servies__card-title">Эпиляция для нее</h2>
+								<picture><source srcset="img/home/servies/7.webp" type="image/webp"><img src="img/home/servies/7.jpg" alt="" class="servies__card-img"></picture>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gift">
+				<div class="gift__container">
+					<div class="gift__info">
+						<p class="gift__subtitle">Подарочные сертификаты</p>
+						<h2 class="h2">Идеальный подарок для близкого человека</h2>
+						<div class="btn-holder">
+							<button class="btn btn-2 hover-slide-up">
+								<span>Заказать онлайн</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__info">
+					<picture><source srcset="img/logo/1-1.webp" type="image/webp"><img src="img/logo/1-1.png" alt="" class="footer__logo"></picture>
+					<h2 class="h2">Салон красоты Laura</h2>
+					<ul class="footer__list-contact">
+						<li class="footer__item-contact">г. Новосибирск ул. Вторая Тверская-Ямская д 37</li>
+						<li class="footer__item-contact"><a href="malto:laura23@mail.ru" class="footer__mail">laura23@mail.ru</a></li>
+						<li class="footer__item-contact"><a href="tel:+79998887766" class="footer__phone">8 (999) 888-77-66</a></li>
+					</ul>
+					<ul class="footer__list-social">
+						<li class="footer__item-social"><a href="" class="footer__link-social"><img src="img/Icons/telegram.svg" alt=""></a></li>
+						<li class="footer__item-social"><a href="" class="footer__link-social"><img src="img/Icons/whatsapp.svg" alt=""></a></li>
+						<li class="footer__item-social"><a href="" class="footer__link-social"><img src="img/Icons/facebook.svg" alt=""></a></li>
+					</ul>
+					<div class="footer__copy">© 2023. Все права защищены.</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- @--@include('html/_popup.htm',{}) -->
+	<script src="js/app.min.js?_v=20230331051305"></script>
+</body>
+
+</html>
